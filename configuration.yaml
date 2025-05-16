@@ -1,0 +1,47 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# configuration.yaml entry to enable the cloud integration
+cloud:
+
+# configuration.yaml entry to enable python script
+python_script:
+
+##################################################################
+# Logger Global Instructions                                     #
+##################################################################
+logger: !include logger.yaml
+
+emulated_hue:
+  listen_port: 80
+  expose_by_default: true
+
+  # sensor:
+#   - platform: template
+#     sensors:
+#       julian_fudge_sensor:
+#         friendly_name: "Julian's Fudge Sensor'"
+#         value_template: "{{ 1234 }}"
+#         unit_of_measurement: "units"
+#         unique_id: fudge_sensor
+
+# Bluetooth
+device_tracker:
+  - platform: bluetooth_le_tracker
+
+##################################################################
+# MQTT Global Instructions                                       #
+##################################################################
+mqtt: !include mqtt.yaml
+##################################################################
+# SNMP Global Instructions                                       #
+##################################################################
+# snmp: !include snmp.yaml

@@ -1,0 +1,9 @@
+##################################################################
+# SNMP Global Instructions                                       #
+##################################################################
+
+- platform: snmp
+  host: 10.10.10.10
+  community: public
+  entity: device_tracker.hp_printer2605dn
+  name: "HP LaserJet 2605dn"

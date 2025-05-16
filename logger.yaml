@@ -1,0 +1,7 @@
+##################################################################
+# Logger Global Instructions                                     #
+##################################################################
+
+default: info
+logs:
+  custom_components.hpprinter: debug

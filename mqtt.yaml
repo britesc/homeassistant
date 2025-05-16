@@ -1,0 +1,10 @@
+##################################################################
+# MQTT Global Instructions                                       #
+##################################################################
+
+sensor:
+  - name: "Drug Test"
+    state_topic: "homeassistant/julian/medicine/drugname/expiry"
+    unique_id: "DT_001"
+
+    
